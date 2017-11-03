@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lite-2D-Space-Fight", "Assembly-CSharp.csproj", "{190B8ED3-7496-4413-2448-9A64B887B292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lite-2D-Space-Fight", "Assembly-CSharp-Editor.csproj", "{9ACCA6D2-CDC2-F977-0203-F49D21A1335A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{190B8ED3-7496-4413-2448-9A64B887B292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190B8ED3-7496-4413-2448-9A64B887B292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190B8ED3-7496-4413-2448-9A64B887B292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190B8ED3-7496-4413-2448-9A64B887B292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACCA6D2-CDC2-F977-0203-F49D21A1335A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACCA6D2-CDC2-F977-0203-F49D21A1335A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACCA6D2-CDC2-F977-0203-F49D21A1335A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACCA6D2-CDC2-F977-0203-F49D21A1335A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
