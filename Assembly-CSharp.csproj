@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\FireGun.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\NetworkInterpolation.cs" />
+     <Compile Include="Assets\Scripts\PlayerPlayScript.cs" />
      <Compile Include="Assets\Scripts\ShipScript.cs" />
      <Compile Include="Assets\Scripts\StateManager.cs" />
      <None Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\Resources\FXAA3.cginc" />

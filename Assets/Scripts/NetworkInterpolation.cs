@@ -20,7 +20,7 @@ public class NetworkInterpolation : NetworkBehaviour
 
     private Rigidbody m_rb;
 
-    public override void OnStartLocalPlayer()
+    public override void OnStartAuthority()
     {
         m_rb = GetComponent<Rigidbody>();
     }
@@ -29,7 +29,7 @@ public class NetworkInterpolation : NetworkBehaviour
     void Update()
     {
 
-        if (isLocalPlayer)
+        if (hasAuthority)
         {
 
             updateInterval += Time.deltaTime;

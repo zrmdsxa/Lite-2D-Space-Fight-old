@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 //GameObject 
 //Pivot
 //Model
-public class ShipScript : MonoBehaviour
+public class ShipScript : NetworkBehaviour
 {
 
-    
+
 
     public float m_ap = 100.0f;	//armor
     public float m_sp = 100.0f;	//shield
@@ -39,21 +40,49 @@ public class ShipScript : MonoBehaviour
 
     private float m_turn;
 
-    
+
 
     // Use this for initialization
 
-    void Start()
+    public override void OnStartAuthority()
     {
-        m_rb = GetComponent<Rigidbody>();
-        m_ship = transform.GetChild(0);
-        m_defaultRotation = m_ship.localRotation;
-        m_rollRate = m_turnRate * 2.0f;
-        m_minThrust = m_minSpeed / m_maxSpeed;
+        Debug.Log("is local: "+isLocalPlayer+" has authority: "+hasAuthority);
+        Debug.Log("owner:"+GetComponent<NetworkIdentity>().clientAuthorityOwner);
+        if (hasAuthority)
+        {
+            
+            m_rb = GetComponent<Rigidbody>();
+            m_ship = transform.GetChild(0);
+            m_defaultRotation = m_ship.localRotation;
+            m_rollRate = m_turnRate * 2.0f;
+            m_minThrust = m_minSpeed / m_maxSpeed;
 
-        //transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
+            isPlayer = true;
+        }
 
     }
+
+    void Start()
+    {
+        //Debug.Log("is local: "+isLocalPlayer+" has authority: "+hasAuthority);
+        //Debug.Log("owner:"+GetComponent<NetworkIdentity>().clientAuthorityOwner);
+        if (hasAuthority)
+        {
+            
+            m_rb = GetComponent<Rigidbody>();
+            m_ship = transform.GetChild(0);
+            m_defaultRotation = m_ship.localRotation;
+            m_rollRate = m_turnRate * 2.0f;
+            m_minThrust = m_minSpeed / m_maxSpeed;
+
+            transform.GetChild(1).gameObject.SetActive(true);
+            isPlayer = true;
+        }
+
+    }
+
+   
 
     /*
         void FixedUpdate()
@@ -65,11 +94,15 @@ public class ShipScript : MonoBehaviour
 
     void Update()
     {
-        if(isPlayer){
-            TurnShip();
-            UpdateVelocity();
+       //Debug.Log("update has authority:"+hasAuthority+" localplayer:"+isLocalPlayer);
+        if (hasAuthority)
+        {
+            if (isPlayer)
+            {
+                TurnShip();
+                UpdateVelocity();
+            }
         }
-        
 
     }
 
@@ -127,5 +160,5 @@ public class ShipScript : MonoBehaviour
         m_turn = Mathf.Lerp(m_turn, 0, Time.deltaTime);
 
     }
-    
+
 }

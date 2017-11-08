@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    public static GameManager instance;
     public StateManager m_stateManager; //drag state manager game object here
 
     public float m_introTimer = 5.0f;
     // Use this for initialization
-    void Start()
+
+    
+    void Awake()
     {
-		Debug.Log("Hello");
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Update is called once per frame
@@ -20,7 +31,7 @@ public class GameManager : MonoBehaviour
         switch (m_stateManager.m_activeState)
         {
             case GameStates.INTRO:
-                Debug.Log("intro");
+                //Debug.Log("intro");
                 UpdateIntro();
                 break;
             case GameStates.MENU:
@@ -40,13 +51,15 @@ public class GameManager : MonoBehaviour
 
     void UpdateIntro()
     {
-		if (m_introTimer <= 0.0f){
-			Debug.Log("Change to MENU");
-			m_stateManager.ChangeState(GameStates.MENU);
-		}
-		else{
-			m_introTimer -= Time.deltaTime;
-		}
+        if (m_introTimer <= 0.0f)
+        {
+            Debug.Log("Change to MENU");
+            m_stateManager.ChangeState(GameStates.MENU);
+        }
+        else
+        {
+            m_introTimer -= Time.deltaTime;
+        }
     }
 
     void UpdatePlay()
