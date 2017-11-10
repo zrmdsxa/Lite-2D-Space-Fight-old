@@ -390,7 +390,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -677506067
+  randomSeed: 1227553415
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3804,7 +3804,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1438595742
+  randomSeed: -669667924
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7020,48 +7020,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1824789734
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319854661433742, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0a9bf730fd3b98c4982a6458f2a8ef9b, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2012842795
 GameObject:
   m_ObjectHideFlags: 0
@@ -7190,7 +7148,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 782817469
+  randomSeed: 962041019
   InitialModule:
     serializedVersion: 3
     enabled: 1

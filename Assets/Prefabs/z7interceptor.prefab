@@ -651,8 +651,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
+  near clip plane: 50
+  far clip plane: 3000
   field of view: 60
   orthographic: 0
   orthographic size: 50
@@ -1194,7 +1194,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 24
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!81 &81091779885295852
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1676,8 +1676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ap: 100
   m_sp: 100
-  m_minSpeed: 50
-  m_maxSpeed: 150
+  m_minSpeed: 1
+  m_maxSpeed: 100
   m_acceleration: 1
   m_thrust: 1
   isPlayer: 1
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4655709692013514, guid: 9ddfe39a1430e0648b10738e4ab39caf, type: 2}
-  bulletSpeed: 5
+  bulletSpeed: 200
   rateOfFire: 10
   isPlayer: 1
 --- !u!124 &124667670517273340

@@ -23,5 +23,6 @@ public class AllyBulletScript : MonoBehaviour {
 
 	public void setVelocity(Vector3 vel){
 		m_rb.velocity = vel;
+		Debug.Log(m_rb.velocity);
 	}
 }

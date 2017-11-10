@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class FireGun : MonoBehaviour
+using UnityEngine.Networking;
+public class FireGun : NetworkBehaviour
 {
 
 
     public Transform bullet;
 
-	public float bulletSpeed = 3.0f;
+	public float bulletSpeed = 1000.0f;
     public float rateOfFire = 10;
     float cooldown = 0.0f;
 
@@ -40,9 +41,11 @@ public class FireGun : MonoBehaviour
                 {
 					cooldown = 0.0f;
                     Transform b = Instantiate(bullet, transform.position, transform.rotation) as Transform;
-					b.gameObject.GetComponent<AllyBulletScript>().setVelocity(m_rb.velocity * bulletSpeed);
+					b.gameObject.GetComponent<AllyBulletScript>().setVelocity(m_rb.velocity + (transform.up * bulletSpeed));
                 }
             }
         }
     }
+
+
 }
